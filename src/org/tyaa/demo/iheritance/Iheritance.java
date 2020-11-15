@@ -5,6 +5,7 @@
  */
 package org.tyaa.demo.iheritance;
 
+import java.util.Arrays;
 import org.tyaa.demo.iheritance.models.Admin;
 import org.tyaa.demo.iheritance.models.Person;
 import org.tyaa.demo.iheritance.models.Student;
@@ -34,8 +35,20 @@ public class Iheritance {
         
         Person s1 = new Student(10.5, "Name1", 18);
         Person s2 = new Student(11.0, "Name2", 18);
-        Person t1 = new Teacher("C#, Java", 15000d, "Name11", 28);
-        Person t2 = new Teacher("Maya 3d, 3D Max", 11000.0, "Name22", 38);
+        Person t1 =
+                new Teacher(
+                        Arrays.asList(new String[] {"C#", "Java"}),
+                        15000d,
+                        "Name11",
+                        28
+                );
+        Person t2 =
+                new Teacher(
+                        Arrays.asList(new String[] {"Maya 3d", "3D Max"}),
+                        11000.0,
+                        "Name22",
+                        38
+                );
         Person a1 = new Admin(12000d, "Name33", 25);
         
         s1.print();

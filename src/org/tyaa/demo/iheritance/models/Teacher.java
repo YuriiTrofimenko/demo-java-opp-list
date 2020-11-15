@@ -5,19 +5,21 @@
  */
 package org.tyaa.demo.iheritance.models;
 
+import java.util.List;
+
 /**
  *
  * @author student
  */
 public class Teacher extends Employee {
     
-    public String subjects;
+    public List<String> subjects;
 
     public Teacher() {
         super();
     }
 
-    public Teacher(String subjects, Double salary, String name, Integer age) {
+    public Teacher(List<String> subjects, Double salary, String name, Integer age) {
         // super - вызов родительского конструктора с двумя аргументами,
         // который инициализирует поля name, age, salary
         super(salary, name, age);
