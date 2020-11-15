@@ -13,13 +13,13 @@ import java.util.List;
  */
 public class Teacher extends Employee {
     
-    public List<String> subjects;
+    public List<Subject> subjects;
 
     public Teacher() {
         super();
     }
 
-    public Teacher(List<String> subjects, Double salary, String name, Integer age) {
+    public Teacher(List<Subject> subjects, Double salary, String name, Integer age) {
         // super - вызов родительского конструктора с двумя аргументами,
         // который инициализирует поля name, age, salary
         super(salary, name, age);

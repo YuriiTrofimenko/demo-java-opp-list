@@ -9,6 +9,7 @@ import java.util.Arrays;
 import org.tyaa.demo.iheritance.models.Admin;
 import org.tyaa.demo.iheritance.models.Person;
 import org.tyaa.demo.iheritance.models.Student;
+import org.tyaa.demo.iheritance.models.Subject;
 import org.tyaa.demo.iheritance.models.Teacher;
 
 /**
@@ -37,14 +38,14 @@ public class Iheritance {
         Person s2 = new Student(11.0, "Name2", 18);
         Person t1 =
                 new Teacher(
-                        Arrays.asList(new String[] {"C#", "Java"}),
+                        Arrays.asList(new Subject[] {new Subject(1, "C#", 32), new Subject(2, "Java", 48)}),
                         15000d,
                         "Name11",
                         28
                 );
         Person t2 =
                 new Teacher(
-                        Arrays.asList(new String[] {"Maya 3d", "3D Max"}),
+                        Arrays.asList(new Subject[] {new Subject(3, "Maya 3d", 42), new Subject(4, "3D Max", 40)}),
                         11000.0,
                         "Name22",
                         38
