@@ -9,7 +9,7 @@ package org.tyaa.demo.iheritance.models;
  *
  * @author student
  */
-public class Student extends Person {
+public final class Student extends Person {
     
     public Double avgScore;
 
@@ -32,6 +32,9 @@ public class Student extends Person {
         super.print();
         System.out.println("; avgScore = " + avgScore);
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Student{" + super.toString() + ", avgScore=" + avgScore + '}';
+    }
 }

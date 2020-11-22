@@ -9,20 +9,26 @@ package org.tyaa.demo.iheritance.models;
  *
  * @author student
  */
-public class Admin extends Employee {
-
-    public Admin() {
-        super();
+public abstract class Model {
+    
+    private static Integer lastId = 0;
+    
+    private Integer id;
+    
+    public Model() {
+        this.id = ++lastId;
+    }
+    
+    public Integer getId(){
+        return this.id;
     }
 
-    public Admin(Double salary, String name, Integer age) {
-        super(salary, name, age);
+    public void print() {
+        System.out.print("id = " + id);
     }
 
     @Override
     public String toString() {
-        return "Admin{" + super.toString() + '}';
+        return "id=" + id;
     }
-    
-    
 }

@@ -9,19 +9,18 @@ package org.tyaa.demo.iheritance.models;
  *
  * @author student
  */
-public class Subject {
-    public Integer id;
+public final class Subject extends Model {
+    
     public String name;
     public Integer lessonsQuantity;
 
-    public Subject(Integer id, String name, Integer lessonsQuantity) {
-        this.id = id;
+    public Subject(String name, Integer lessonsQuantity) {
         this.name = name;
         this.lessonsQuantity = lessonsQuantity;
     }
 
     @Override
     public String toString() {
-        return "Subject{" + "id=" + id + ", name=" + name + ", lessonsQuantity=" + lessonsQuantity + '}';
+        return "Subject{"+ super.toString() +", name=" + name + ", lessonsQuantity=" + lessonsQuantity + '}';
     }
 }

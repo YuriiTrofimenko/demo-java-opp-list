@@ -31,4 +31,9 @@ public abstract class Employee extends Person {
         super.print();
         System.out.print("; salary = " + salary);
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", salary=" + salary;
+    }
 }
